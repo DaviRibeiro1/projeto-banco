@@ -4,32 +4,16 @@
   padding: 0;
 }
 
-form {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  margin-top: 20px;
+img {
+  height: 100px;
+  width: 100px;
 }
 
-form > input {
-  width: 500px;
-  margin-bottom: 30px;
-  height: 38px;
-  border: none;
-  border-radius: 3px;
-  padding-left: 5px;
+h3 {
+  margin: 10px 0 60px 0;
 }
 
-label {
-  color: black;
-  font-size: 20px;
-}
-
-form > input:focus {
-  outline: none;
-}
-
-.center-form {
+.center {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,21 +21,47 @@ form > input:focus {
   height: 100vh;
 }
 
-.formulario {
-  height: 600px;
-  width: 600px;
+.card {
+  height: 800px;
+  width: 650px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: aqua;
+  background-color: rgb(1, 13, 37);
+  color: white;
   border-radius: 10px;
 }
 
-.formulario > h1 {
-  font-size: 30px;
-  font-weight: 900;
-  margin-top: 10px;
+label {
+  font-size: 20px;
+}
+
+.emprestimo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.emprestimo > input {
+  height: 35px;
+  width: 500px;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.parcelas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.parcelas > input {
+  height: 35px;
+  width: 500px;
+  border-radius: 5px;
+  padding-left: 10px;
 }
 
 .btn > button {
@@ -68,6 +78,7 @@ form > input:focus {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .btn > button:hover {
@@ -76,7 +87,17 @@ form > input:focus {
   color: white;
 }
 
-#resultado {
+.resultado {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 38px;
+  background-color: white;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.total {
   width: 500px;
   height: 38px;
   background-color: white;
