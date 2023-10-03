@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FATEC Bank</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="center-form">
+      <div class="formulario">
+        <img src="/pngwing.com.png" alt="logotipo" />
+        <form>
+          <label for="login">Temperatura</label>
+          <input type="text" id="login" name="login" />
+          <div class="temp">
+            <label for="atual">Atual</label>
+            <select name="atual" id="atual">
+              <option value="Celsius">C</option>
+              <option value="Kelvin">K</option>
+              <option value="Fahrenheint">F</option>
+            </select>
+            <label for="desejada">Desejada</label>
+            <select name="desejada" id="desejada">
+              <option value="Celsius">C</option>
+              <option value="Kelvin">K</option>
+              <option value="Fahrenheint">F</option>
+            </select>
+          </div>
+          <div class="btn">
+            <button onclick="login()">Entrar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

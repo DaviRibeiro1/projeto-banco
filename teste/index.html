@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de temperatura</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="center-form">
+      <div class="formulario">
+        <div class="temperatura">
+          <label for="temperatura">Temperatura</label>
+          <input type="text" id="temperatura" />
+        </div>
+        <div class="selecao">
+          <div class="tempAtual">
+            <label for="atual">Atual</label>
+            <select name="atual" id="atual">
+              <option value="Celsius">C</option>
+              <option value="Kelvin">K</option>
+              <option value="Fahrenheint">F</option>
+            </select>
+          </div>
+          <div class="tempDesejada">
+            <label for="desejada">Desejada</label>
+            <select name="desejada" id="desejada">
+              <option value="Celsius">C</option>
+              <option value="Kelvin">K</option>
+              <option value="Fahrenheint">F</option>
+            </select>
+          </div>
+        </div>
+        <div id="resultado"></div>
+        <div class="btn">
+          <button onclick="calculo()">Calcular</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function calculo() {
+        var temp = parseFloat(document.getElementById("temperatura").value);
+        const atual = document.getElementById("atual").value;
+        const desejada = document.getElementById("desejada").value;
+
+        if (atual == "Celsius" && desejada == "Kelvin") {
+          temp = temp + 273.15;
+        } else if (atual == "Celsius" && desejada == "Fahrenheint") {
+          temp = temp * 1.8 + 32;
+        } else if (atual == "Kelvin" && desejada == "Celsius") {
+          temp = temp - 273.15;
+        } else if (atual == "Kelvin" && desejada == "Fahrenheint") {
+          temp = temp * 1.8 - 459.67;
+        } else if (atual == "Fahrenheint" && desejada == "Celsius") {
+          temp = (temp - 32) / 1.8;
+        } else if (atual == "Fahrenheint" && desejada == "Kelvin") {
+          temp = (temp + 459.67) / 1.8;
+        } else alert("Valores invalidos");
+
+        document.getElementById("resultado").innerHTML = temp;
+      }
+    </script>
+  </body>
+</html>
