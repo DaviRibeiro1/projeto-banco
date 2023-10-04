@@ -19,14 +19,10 @@ img {
   margin: 15px 0 0 0px;
 }
 
-.header {
+.topo {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-}
-
-.titulo {
-  justify-content: center;
 }
 
 body {
@@ -38,7 +34,7 @@ body {
   letter-spacing: 1px;
   background-color: #0c1022;
 }
-.login_form_container {
+.container {
   position: relative;
   width: 700px;
   height: 770px;
@@ -52,34 +48,34 @@ body {
   overflow: hidden;
   margin-top: 70px;
 }
-.login_form_container::before {
+.container::before {
   position: absolute;
   width: 170%;
   height: 170%;
   content: "";
-  background-image: conic-gradient(
+  background: conic-gradient(
     transparent,
     transparent,
     transparent,
     #ffffff
   );
-  animation: rotate_border 6s linear infinite;
+  animation: AnimacaoBorda 5s linear infinite;
 }
-.login_form_container::after {
+.container::after {
   position: absolute;
   width: 170%;
   height: 170%;
   content: "";
-  background-image: conic-gradient(
+  background: conic-gradient(
     transparent,
     transparent,
     transparent,
     #00ccff
   );
-  animation: rotate_border 6s linear infinite;
+  animation: AnimacaoBorda 5s linear infinite;
   animation-delay: -3s;
 }
-@keyframes rotate_border {
+@keyframes AnimacaoBorda {
   0% {
     transform: rotate(0deg);
   }
@@ -87,14 +83,14 @@ body {
     transform: rotate(360deg);
   }
 }
-.login_form {
+.card {
   position: absolute;
   content: "";
   background-color: #0c1022;
   border-radius: 50px 5px;
   inset: 5px;
   padding: 50px 40px;
-  z-index: 10;
+  z-index: 1;
   color: #00ccff;
 }
 
@@ -163,8 +159,8 @@ label {
   height: 38px;
   background-color: white;
   margin-bottom: 10px;
+  padding: 8px;
   color: black;
-  padding: 6px 0 0 10px;
   border-radius: 5px;
   font-size: 20px;
   font-weight: bold;
