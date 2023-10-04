@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco do Bando</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    >
+    <link rel="stylesheet" href="card.css">
+    <link
+      rel="shortcut icon"
+      href="/imagens/pngwing.com.ico"
+      type="image/x-icon"
+    >
+  </head>
+  <body>
+    <div class="login_form_container">
+      <div class="login_form">
+        <div class="header">
+          <div class="logo">
+            <img src="/imagens/pngwing.com.png" alt="logo">
+          </div>
+          <div class="titulo">
+            <h3>Crazy Bank</h3>
+            <h4>Simule aqui seu emprestimo</h4>
+          </div>
+        </div>
+        <!-- Campos de entrada -->
+        <div class="emprestimo">
+          <label for="valorEmprestimo">Valor do Empréstimo:</label>
+          <input
+            type="number"
+            id="valorEmprestimo"
+            placeholder="Informe o valor do empréstimo"
+          >
+        </div>
+
+        <div class="parcelas">
+          <label for="quantidadeParcelas"
+            >Quantidade de Parcelas (máximo de 96 meses):</label
+          >
+          <input
+            type="number"
+            id="quantidadeParcelas"
+            placeholder="Informe a quantidade de parcelas"
+            max="96"
+          >
+        </div>
+
+        <!-- Botão de cálculo -->
+        <div class="btn">
+          <button onclick="calcularEmprestimo()">Calcular Empréstimo</button>
+        </div>
+        <!-- Exibição dos resultados -->
+        <p>Valor da parcela mensal</p>
+        <div id="mensal" class="resultado"></div>
+        <p>Valor total do emprestimo</p>
+        <div id="total" class="resultado"></div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/script.js"></script>
+    
+  </body>
+</html>
